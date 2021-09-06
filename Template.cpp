@@ -1,38 +1,32 @@
 #include <bits/stdc++.h>
-
-using ll = long long ;
-using ull = unsigned long long ;
-#define pint  pair<int,int>
-#define vint  vector <int> 
-#define vpint  vector <pair<int,int>> 
-
-#define Hello_World ios::sync_with_stdio(0); cin.tie(nullptr); cout.tie(nullptr);
-#define letMeIn freopen ("in.txt","r",stdin); freopen ("out.txt","w",stdout);
-#define USACO(x) freopen (x".in","r",stdin); freopen (x".out","w",stdout);
-#define sortv(v) sort(v.begin(),v.end())
-#define revv(v) reverse(v.begin(),v.end())
-#define rep(x) for(int xzcv5423 = 0 ; xzcv5423 < x ; xzcv5423++)
-
-#define yup puts("YES");
-#define nope puts("NO");
+using namespace std;
 #define F first
 #define S second
-#define pb push_back
-#define pi 3.14159265359
 #define endl "\n"
-using namespace std;
-
-void takeintv(vector <int>& v,int size){
-    for(int i = 0; i < size ; i++)
-        cin>> v[i];
-}
-
-void printv(vector <int>& v){
-    for(int i = 0; i < v.size() ; i++)
-        cout << v[i] << " ";
-}
-
-int main(){
-    cout << "Hello World" << endl;
-    return 0;    
+#define pb push_back
+#define ll long long 
+#define nope puts("NO"); 
+#define yup puts("YES");
+#define pi 3.14159265359
+#define all(n) n.begin(),n.end()
+#define ull unsigned long long int
+#define rall(n) n.rbegin(),n.rend()
+#define lzeros(mask) __builtin_clz(mask) // no of leading zeros
+#define tzeros(mask) __builtin_ctz(mask) // no of trailing zeros
+#define Time cerr << "\nTime Taken: " << (float)clock() / CLOCKS_PER_SEC << " Secs" << "\n";
+#define thats_what_she_said int main(){ ios::sync_with_stdio(0); cin.tie(nullptr); cout.tie(nullptr);
+string uppercase(string &s) {transform(s.begin(), s.end(), s.begin(), ::toupper); return s;}
+string lowercase(string &s) {transform(s.begin(), s.end(), s.begin(), ::tolower); return s;}
+ll gcd(ll first, ll second) { return !second ? first : gcd(second, first % second); }
+ll lcm(ll first, ll second) { return (first / gcd(first, second)) * second; }
+//freopen("input.txt","r",stdin); 
+//freopen("output.txt","w",stdout); 
+thats_what_she_said // x  minutes 
+    int T = 1;
+    //cin >> T;
+    while(T--)
+    {
+        // code here
+    }
+    Time
 }
