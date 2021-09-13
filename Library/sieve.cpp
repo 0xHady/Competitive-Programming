@@ -28,6 +28,8 @@ int main(){
     sieve(10000000);
     int n = -1;
     while(++n <= 1000) if(bs[n]) cout << n << " is prime" << endl;
+    cout << "the last prime number <= 10^7 is : " << primes[primes.size()-1] << endl;
+
 
     Time
 }
