@@ -10,7 +10,7 @@ void fillDivs(int n){
     for(int i = 1 ; i*i <= n ;i++){
         if(!(n%i)){
             divs1.pb(i);
-            if(i != (n/i))
+            if(i != (n/i)) // to avoid having duplicates in the vector
                 divs2.pb(n/i);
         }
     }
