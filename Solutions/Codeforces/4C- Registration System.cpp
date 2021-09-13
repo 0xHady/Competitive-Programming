@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+#define endl "\n"
+#define thats_what_she_said ios::sync_with_stdio(0); cin.tie(nullptr); cout.tie(nullptr);
+using namespace std;
+ 
+int main(){
+ thats_what_she_said
+ int n; cin >> n;
+ map <string,int> mp;
+ while(n--){
+  string t; cin >> t;
+  if(mp[t] == 0) cout << "OK" << endl;
+  else cout << t+to_string(mp[t]) << endl;
+  mp[t]++;
+ }
+}
