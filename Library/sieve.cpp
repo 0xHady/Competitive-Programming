@@ -17,7 +17,7 @@ void sieve(ll upperbound){
         if(bs[i]){
             for(ll j = i*i; j<= sieve_size; j+=i)
                 bs[j] = 0;
-            primes.pb(i);
+            primes.pb(i); // remember to comment this out if you don't need it 
         }
     }
 }
