@@ -42,4 +42,5 @@ int main(){
  * A number is divisible by 9  if the sum of the digits is divisible by 9.	
  * A number is divisible by 10  if the last digit is 0.	
  * 
+ * Divisibility doesn't change by adding zeros (check CF 260-A)
  */
