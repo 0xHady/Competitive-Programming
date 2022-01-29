@@ -44,9 +44,15 @@ template <class T> T ecDst(T x1, T x2, T y1, T y2){ return pow((double)x2-x1,2.0
  */
 //hey
 void solve(){
-    int n,t,k,d; cin >> n >> t >> k >> d;
-    int x = floor(d/(double)t)*k;
-    if(n-x > k ) yup else nope
+    string s; 
+    int n,res=0; cin >> n>>s;
+ 
+    for(int i =0 ;i < n-1; i++)
+        if(s[i] == s[++i] && ++res) 
+            s[i] = ('c'%(s[i]+1))+'a';
+ 
+    log4j(res);
+    log4j(s);
 }
  
 /**/thats_what_she_said/**/

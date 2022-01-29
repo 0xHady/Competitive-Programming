@@ -43,17 +43,29 @@ template <class T> T ecDst(T x1, T x2, T y1, T y2){ return pow((double)x2-x1,2.0
  * x minutes
  */
 //hey
+#define tzeros(mask) __builtin_ctz(mask) // no of trailing zeros
 void solve(){
-    int n,t,k,d; cin >> n >> t >> k >> d;
-    int x = floor(d/(double)t)*k;
-    if(n-x > k ) yup else nope
+    int n; cin >> n;
+    vector <pair <int,int>> v(n);
+    for(int i= 0; i < n; i++){
+        int a ; cin >> a;
+        v[i] = {a,i+1};
+    }
+    sort(rall(v));
+    ll s = 0 ;
+    for(int i = 0 ;i < n ;i++){
+        s+= (v[i].F*i + 1);
+    }
+    cout << s << endl;
+    for(auto &i:v){
+        cout << i.S << ' ';
+    }
 }
  
 /**/thats_what_she_said/**/
     int TC = 1;
-//    cin >> TC;
+   // cin >> TC;
     while(TC--)
         solve();
     Time
 }
- 

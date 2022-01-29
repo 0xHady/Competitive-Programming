@@ -1,31 +1,37 @@
-#include <iostream> 
-#include <cmath>
-#include <algorithm> 
-#include <string> 
+#include <bits/stdc++.h>
 using namespace std;
+main(){
  
-int main(){
+int n;
+int b;
+int d; 
+cin>>n>>b>>d;
+int a[n];
+for ( int i = 0; i<n; i++)
+ cin>>a[i];
  
-    long long n , b , d , a , i , wastes = 0 , c = 0;
-    cin>>n>>b>>d;
-    for( i = 0 ; i< n ; i++)
-    {
-        cin>>a;
-        if(a > b)
-        {
-            continue;
-        }
-        else
-        {
-            wastes += a;
-        }
+int counter=0;
+int waste=0;
+for ( int i = 0; i<n; i++)
+ {
+     if (  a[i]<= b && waste <= d)
+         {
+            waste+=a[i];
+             if (waste > d)
+                 {
+             counter++;
+             waste=0;
+                }
+         }
+         else if ( waste > d)
+         {
+             counter++;
+             waste=0;
+         }
+ }
+ cout<<counter;
  
-        if(wastes > d)
-        {
-            c++;
-            wastes  = 0;
-        }
-    }
-    cout<<c;
- 
-} 
+  
+        
+  
+}

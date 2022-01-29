@@ -21,6 +21,7 @@ typedef vector <long long> vll;
 typedef unsigned long long int ull;
 #define rall(n) n.rbegin(),n.rend()
 #define sz(xxxf) (int)(xxxf.size())
+#define rep(x) for(int dffdk=0;dffdk<x;dffdk++)
 #define log4j(hkjl) cout << hkjl << endl
 #define READ(FILE) freopen(FILE,"r",stdin);
 #define mem(a, x) memset(a , x , sizeof(a))
@@ -29,6 +30,7 @@ typedef unsigned long long int ull;
 #define WRITE(FILE) freopen(FILE,"w",stdout);
 #define debug(x) cerr << #x << ": " << (x) << endl;
 #define print_vec(v) for(auto &zkksd:v) cout << zkksd << ' ' ;
+//double nCr(int n, int k){return 1/((n+1)*std::beta(n-k+1,k+1));} //17
 template <class T> T myceil(T a,T b){return ((a/b)+((a%b)!=0));}
 template <class T> bool isSquare (T n) {T sq = sqrt(n);  return (sq*sq)==n;}
 template <class T, class U> T GCD (T a, U b) {return (!b ? a : GCD(b, a%b));}
@@ -44,14 +46,38 @@ template <class T> T ecDst(T x1, T x2, T y1, T y2){ return pow((double)x2-x1,2.0
  */
 //hey
 void solve(){
-    int n,t,k,d; cin >> n >> t >> k >> d;
-    int x = floor(d/(double)t)*k;
-    if(n-x > k ) yup else nope
+    ll n; cin >> n; 
+    vector <ll> res;
+    vector <pair<ll,ll>> v(n+1);
+    ll sum =0;
+    
+    for(int i = 1;i <= n; i++){ 
+        ll t; cin >> t;
+        v[i] = {t,i};
+        sum+=t ; 
+    }
+    sort(all(v));
+    ll lst = v[n].F*2;
+ 
+    for(int i= 1 ;i < n; i++){
+        ll target = sum-v[i].F;
+ 
+        if(target == lst) 
+            res.pb(v[i].S);
+    }
+ 
+    if(sum-v[n].F == v[n-1].F*2) 
+        res.pb(v[n].S);
+ 
+ 
+    log4j(sz(res));
+    print_vec(res);
 }
+ 
  
 /**/thats_what_she_said/**/
     int TC = 1;
-//    cin >> TC;
+    //cin >> TC;
     while(TC--)
         solve();
     Time

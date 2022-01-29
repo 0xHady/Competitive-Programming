@@ -5,7 +5,6 @@ using namespace std;
 #define endl "\n"
 #define pb push_back
 typedef long long ll;
-typedef vector<int> vi;
 typedef vector<int> vint;
 void donothing(){return;}
 #define PQ priority_queue
@@ -44,15 +43,24 @@ template <class T> T ecDst(T x1, T x2, T y1, T y2){ return pow((double)x2-x1,2.0
  */
 //hey
 void solve(){
-    int n,t,k,d; cin >> n >> t >> k >> d;
-    int x = floor(d/(double)t)*k;
-    if(n-x > k ) yup else nope
+    int n; cin >> n;
+    vint v(n);
+    tk(v);
+    int mx = 1;
+    int cur=1;
+    for(int i =1; i<n; i++){
+        if(v[i] > v[i-1])cur++;
+        else cur=1;
+        mx=max(mx,cur);
+    }
+    cout << mx << endl;
 }
  
 /**/thats_what_she_said/**/
-    int TC = 1;
-//    cin >> TC;
-    while(TC--)
+    int T = 1;
+    //tc
+    //cin >> T;
+    while(T--)
         solve();
     Time
 }

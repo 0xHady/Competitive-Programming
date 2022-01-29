@@ -29,6 +29,7 @@ typedef unsigned long long int ull;
 #define WRITE(FILE) freopen(FILE,"w",stdout);
 #define debug(x) cerr << #x << ": " << (x) << endl;
 #define print_vec(v) for(auto &zkksd:v) cout << zkksd << ' ' ;
+//double nCr(int n, int k){return 1/((n+1)*std::beta(n-k+1,k+1));}
 template <class T> T myceil(T a,T b){return ((a/b)+((a%b)!=0));}
 template <class T> bool isSquare (T n) {T sq = sqrt(n);  return (sq*sq)==n;}
 template <class T, class U> T GCD (T a, U b) {return (!b ? a : GCD(b, a%b));}
@@ -43,15 +44,21 @@ template <class T> T ecDst(T x1, T x2, T y1, T y2){ return pow((double)x2-x1,2.0
  * x minutes
  */
 //hey
+ll freq[(int)1e6+120];
 void solve(){
-    int n,t,k,d; cin >> n >> t >> k >> d;
-    int x = floor(d/(double)t)*k;
-    if(n-x > k ) yup else nope
+    int n; cin >>n; vi v(n); tk(v);
+    ll res = 0;
+    for(auto &a:v){
+        for(auto &b:v){
+            if(a != b) res = max(res,++freq[a+b]);
+        }
+    }
+    log4j(res/2);
 }
  
 /**/thats_what_she_said/**/
     int TC = 1;
-//    cin >> TC;
+    //cin >> TC;
     while(TC--)
         solve();
     Time

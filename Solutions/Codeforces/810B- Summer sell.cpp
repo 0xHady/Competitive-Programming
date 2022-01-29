@@ -5,7 +5,6 @@ using namespace std;
 #define endl "\n"
 #define pb push_back
 typedef long long ll;
-typedef vector<int> vi;
 typedef vector<int> vint;
 void donothing(){return;}
 #define PQ priority_queue
@@ -17,7 +16,6 @@ typedef vector <long long> vll;
 #define all(n) n.begin(),n.end()
 #define nope cout << "NO" << endl;
 #define yup cout << "YES" << endl;
-#define impo cout << "-1" << endl;
 typedef unsigned long long int ull;
 #define rall(n) n.rbegin(),n.rend()
 #define sz(xxxf) (int)(xxxf.size())
@@ -32,7 +30,7 @@ typedef unsigned long long int ull;
 template <class T> T myceil(T a,T b){return ((a/b)+((a%b)!=0));}
 template <class T> bool isSquare (T n) {T sq = sqrt(n);  return (sq*sq)==n;}
 template <class T, class U> T GCD (T a, U b) {return (!b ? a : GCD(b, a%b));}
-template <class T, class U> T LCM (T a, U b) {return ( (a / GCD(a, b) ) * b);}
+template <class T, class U> T LCM (T a, U b) {return ((a/GCD(a, b)) * b);}
 string uppercase(string &s) {transform(s.begin(), s.end(), s.begin(), ::toupper); return s;}
 string lowercase(string &s) {transform(s.begin(), s.end(), s.begin(), ::tolower); return s;}
 #define Time cerr << "\nTime Taken: " << (float)clock() / CLOCKS_PER_SEC << " Secs" << "\n";
@@ -42,18 +40,29 @@ template <class T> T ecDst(T x1, T x2, T y1, T y2){ return pow((double)x2-x1,2.0
 /*
  * x minutes
  */
-//hey
-void solve(){
-    int n,t,k,d; cin >> n >> t >> k >> d;
-    int x = floor(d/(double)t)*k;
-    if(n-x > k ) yup else nope
-}
  
-/**/thats_what_she_said/**/
-    int TC = 1;
-//    cin >> TC;
-    while(TC--)
-        solve();
-    Time
-}
  
+//**/thats_what_she_said/**/
+int main(){
+    int T = 1;
+    //cin >> T;
+    while(T--)
+    {
+        int n,f,j=0;
+        scanf("%d%d",&n,&f);
+        ll res = 0;
+        vint v(n);
+ 
+        for(int i = 0 ;i < n; i++){
+            int k,l; scanf("%d%d",&k,&l);
+            res+= min(k,l);
+            v[i] = min(2*k,l)- min(k,l);
+        }
+        sort(rall(v));
+ 
+        while(j < f) res+=v[j++];
+        printf("%lld\n",res);
+ 
+    }
+    //Time
+}

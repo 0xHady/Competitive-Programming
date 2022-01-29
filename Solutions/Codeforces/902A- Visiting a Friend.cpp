@@ -43,15 +43,19 @@ template <class T> T ecDst(T x1, T x2, T y1, T y2){ return pow((double)x2-x1,2.0
  * x minutes
  */
 //hey
-void solve(){
-    int n,t,k,d; cin >> n >> t >> k >> d;
-    int x = floor(d/(double)t)*k;
-    if(n-x > k ) yup else nope
+void solve(){ //wark's
+    int n,a,b,m,mx=0; cin >> n >>m;
+    for(int i =0 ;i < n; i++){
+        cin >> a >> b;
+        if(a > mx){nope return;}
+        mx = max(mx,b);
+    }
+    if(mx < m) nope else yup
 }
  
 /**/thats_what_she_said/**/
     int TC = 1;
-//    cin >> TC;
+//   cin >> TC;
     while(TC--)
         solve();
     Time
