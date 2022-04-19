@@ -48,9 +48,13 @@ int main(){
  * A number is divisible by 10  if the last digit is 0.	
  *
  * 11 check:
- * Add and subtract digits in an alternating pattern
- * check if that answer is divisible by 11
- * 987 (+9−8+7 = 8) No
+ * Subtract the last digit from a number made by the other digits.
+ * If that number is divisible by 11 then the original number is, too.
+ * 1464 − 1 is 1463
+ * 146 − 3 is 143
+ * 14 − 3 is 11, which is divisible by 11
+ * so 14641 is divisible by 11
+ * 
  *
  * A number is divisible by 12 if it's divisible by 3 and 4
  */
