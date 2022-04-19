@@ -46,7 +46,16 @@ int main(){
  * A number is divisible by 8  if the number formed by the last three digits is divisible by 8.	
  * A number is divisible by 9  if the sum of the digits is divisible by 9.	
  * A number is divisible by 10  if the last digit is 0.	
- * 
+ *
+ * 11 check:
+ * Add and subtract digits in an alternating pattern
+ * check if that answer is divisible by 11
+ * 987 (+9−8+7 = 8) No
+ *
+ * A number is divisible by 12 if it's divisible by 3 and 4
+ */
+
+ /*
  * Divisibility doesn't change by adding zeros (check CF 260-A)
  */
 
