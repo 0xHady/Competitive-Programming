@@ -36,7 +36,13 @@ int main(){
  * A number is divisible by 3  if the sum of the digits is divisible by 3.	
  * A number is divisible by 4  if the number formed by the last two digits is divisible by 4.	
  * A number is divisible by 5  if the last digit is either 0 or 5.	
- * A number is divisible by 6  if it is divisible by 2 AND it is divisible by 3.	
+ * A number is divisible by 6  if it is divisible by 2 AND it is divisible by 3.
+ *
+ * 7 check:
+ * Double the last digit and subtract it from a number made by the other digits. 
+ * The result must be divisible by 7. (We can apply this rule to that answer again)
+ * 672 (Double 2 is 4, 67−4=63, and 63÷7=9) Yes
+
  * A number is divisible by 8  if the number formed by the last three digits is divisible by 8.	
  * A number is divisible by 9  if the sum of the digits is divisible by 9.	
  * A number is divisible by 10  if the last digit is 0.	
