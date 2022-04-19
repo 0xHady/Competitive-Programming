@@ -32,7 +32,6 @@ int main(){
 }
 
 /*
- *
  * A number is divisible by 2  if the last digit is 0, 2, 4, 6 or 8.
  * A number is divisible by 3  if the sum of the digits is divisible by 3.	
  * A number is divisible by 4  if the number formed by the last two digits is divisible by 4.	
@@ -44,3 +43,5 @@ int main(){
  * 
  * Divisibility doesn't change by adding zeros (check CF 260-A)
  */
+
+// TODO: Add more numbers (https://divisible.info/DivisibilityRules/Divisibility-Rules.html)
