@@ -66,6 +66,8 @@ vi prev_smaller(vi v){
     return res;
 }
 
+void next_and_pre_greater_one_loop(vi v);
+
 int main(){
     vector <int> v = {2,3,1,5,4};
     cout << "next_greater" << endl;
@@ -87,5 +89,34 @@ int main(){
     print_vec(v); cout << endl;
     print_vec(prev_smaller(v));
     cout <<"\n\n";
+
+    next_and_pre_greater_one_loop(v);
 }
 
+void next_and_pre_greater_one_loop(vi v){
+    int n = v.size();
+    vi prev_greater_vec(n,-1);
+    vi next_greater_vec(n,-1);
+    stack <int> st;
+
+    for(int i= 0 ;i < n ; i++){
+        while(st.size() && v[i] > v[st.top()]){
+            //                  ^
+            //                  |-> make it >= to switch the equal vectors
+            next_greater_vec[st.top()] = v[i];
+            st.pop();
+        }
+        // actuarlly prev_greater_EQUAL_vec (cuz of line 105)
+        prev_greater_vec[i] = st.empty() ? -1 : v[st.top()];
+        st.push(i);
+    }
+
+    cout << "prev_greater_vec" << endl;
+    print_vec(v); cout << endl;
+    print_vec(prev_greater_vec); cout << endl;
+
+    cout << "next_greater_vec" << endl;
+    print_vec(v); cout << endl;
+    print_vec(next_greater_vec); cout << endl;
+}
+// https://youtu.be/dtiBmmIPR0E
