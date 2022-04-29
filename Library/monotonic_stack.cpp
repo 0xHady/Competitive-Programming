@@ -24,6 +24,12 @@ vi next_greater(vi v){
     return res;
 }
 
+/*
+ * in a decreasing monotonic stack
+ * when v[i] end on top of x, then x is the prev_greater of v[i]
+ * when v[i] pops x, then v[i] is the next_greater of x
+ */
+
 void next_and_pre_greater_one_loop(vi v){
     int n = v.size();
     vi prev_greater_vec(n,-1);
