@@ -120,3 +120,32 @@ void next_and_pre_greater_one_loop(vi v){
     print_vec(next_greater_vec); cout << endl;
 }
 // https://youtu.be/dtiBmmIPR0E
+
+
+/*
+output:
+
+next_greater
+2 3 1 5 4 
+3 5 5 -1 -1 
+
+prev_greater
+2 3 1 5 4 
+-1 -1 3 -1 5 
+
+next_smaller
+2 3 1 5 4 
+1 1 -1 4 -1 
+
+prev_smaller
+2 3 1 5 4 
+-1 2 -1 1 1 
+
+prev_greater_vec
+2 3 1 5 4 
+-1 -1 3 -1 5 
+next_greater_vec
+2 3 1 5 4 
+3 5 5 -1 -1 
+
+*/
