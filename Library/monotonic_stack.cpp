@@ -106,7 +106,7 @@ void next_and_pre_greater_one_loop(vi v){
             next_greater_vec[st.top()] = v[i];
             st.pop();
         }
-        // actuarlly prev_greater_EQUAL_vec (cuz of line 105)
+        // actually prev_greater_EQUAL_vec (cuz of line 105)
         prev_greater_vec[i] = st.empty() ? -1 : v[st.top()];
         st.push(i);
     }
